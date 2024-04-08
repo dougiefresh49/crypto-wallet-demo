@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ![Logo](https://github.com/dougiefresh49/crypto-wallet-demo/blob/main/src/app/icon.png) Crypto Wallet Balances Demo
+
+This is a demo app that fetches and display all cryptocurrency token balances in a given wallet
+
+Built with
+
+- [Next.js](https://nextjs.org/)
+- [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+- pnpm
+- tailwind
+- [shadcn](https://ui.shadcn.com/)
+- [`next/font`](https://nextjs.org/docs/basic-features/font-optimization)
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
-npm run dev
-# or
-yarn dev
-# or
 pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Test Wallets
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- `0x742d35cc6634c0532925a3b844bc454e4438f44e`
+- `0xfe9e8709d3215310075d67e3ed32a380ccf451c8`
 
-## Learn More
+## Implementation Details
 
-To learn more about Next.js, take a look at the following resources:
+### eth-balance-checker
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- used to simplify the logic in checking a balance for all the tokens but the underlying logic boils down to
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```js
+for (let tokenAddress of tokenAddresses) {
+  const contract = new web3.eth.Contract(erc20AbiJson, tokenAddress);
+  const tokenBalance = await contract.methods.balanceOf(walletAddress).call();
+  // convert from wei to eth etc
+}
+```
 
-## Deploy on Vercel
+### Logo
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- from chat gpt
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Deployment
+
+Hostes on Vercel at [crypto-wallet-demo-theta.vercel.app](https://crypto-wallet-demo-theta.vercel.app/)
