@@ -14,26 +14,10 @@ export const metadata: Metadata = {
   openGraph: {
     title,
     description,
-    images: [
-      {
-        url: '/public/images/og-image.png',
-        width: 1280,
-        height: 640,
-        alt: 'Crypto Wallet Demo',
-      },
-    ],
   },
   twitter: {
     title,
     description,
-    images: [
-      {
-        url: '/public/images/og-image.png',
-        width: 1280,
-        height: 640,
-        alt: 'Crypto Wallet Demo',
-      },
-    ],
     card: 'summary_large_image',
   },
 };
