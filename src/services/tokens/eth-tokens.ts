@@ -1,6 +1,32 @@
 import { EthTokenMap } from './types';
 // Note: combined list from https://github.com/ethereum-lists/tokens/tree/master/tokens/eth files
 export const tokensMap: EthTokenMap = {
+  '0x0000000000000000000000000000000000000000': {
+    symbol: 'ETH',
+    name: 'Ethereum',
+    type: 'ERC20',
+    address: '0x0000000000000000000000000000000000000000',
+    ens_address: '',
+    decimals: 18,
+    website: 'https://ethereum.org/',
+    logo: {
+      src: 'https://ethereum.org/_ipx/w_1920,q_75/%2F_next%2Fstatic%2Fmedia%2Feth-diamond-purple.7929ed26.png?q=75&url=%2F_next%2Fstatic%2Fmedia%2Feth-diamond-purple.7929ed26.png&w=1920',
+      width: '',
+      height: '',
+      ipfs_hash: '',
+    },
+    support: {
+      email: '',
+      url: '',
+    },
+    social: {
+      discord: 'https://discord.gg/ethereum-org',
+      github: 'https://github.com/ethereum/ethereum-org-website',
+      reddit: 'https://www.reddit.com/r/TrustToken/',
+      telegram: 'https://t.me/joinchat/HihkMkTja1gIyBRM1J1_vg',
+      twitter: 'https://twitter.com/ethdotorg',
+    },
+  },
   '0x0000000000085d4780B73119b644AE5ecd22b376': {
     symbol: 'TUSD',
     name: 'TrueUSD',

@@ -1,4 +1,4 @@
-# ![Logo](https://github.com/dougiefresh49/crypto-wallet-demo/blob/main/src/app/icon.png) Crypto Wallet Balances Demo
+# <img src="https://github.com/dougiefresh49/crypto-wallet-demo/blob/main/src/app/icon.png" width="100" height="100"> Crypto Wallet Balances Demo
 
 This is a demo app that fetches and display all cryptocurrency token balances in a given wallet
 
