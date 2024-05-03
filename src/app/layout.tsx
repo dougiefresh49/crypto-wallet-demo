@@ -4,11 +4,38 @@ import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
 
 const inter = Inter({ subsets: ['latin'] });
+const title = 'Crypto Wallet Demo';
+const description =
+  'Fetch and display all cryptocurrency balances in a given wallet';
 
 export const metadata: Metadata = {
-  title: 'Crypto Wallet Demo',
-  description:
-    'Fetch and display all cryptocurrency balances in a given wallet',
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+    images: [
+      {
+        url: '/public/images/og-image.png',
+        width: 1280,
+        height: 640,
+        alt: 'Crypto Wallet Demo',
+      },
+    ],
+  },
+  twitter: {
+    title,
+    description,
+    images: [
+      {
+        url: '/public/images/og-image.png',
+        width: 1280,
+        height: 640,
+        alt: 'Crypto Wallet Demo',
+      },
+    ],
+    card: 'summary_large_image',
+  },
 };
 
 export default function RootLayout({
